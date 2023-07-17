@@ -64,22 +64,8 @@ const App = () => {
           console.log(data);
         });
     }
-    setListaTareas(listaTareas.concat([tarea]));
   };
  
-	const deleteAllTask = async () => {
-		try {
-			const httpresponse = await fetch(`${urlBase}/Ale`, {
-				method: "DELETE",
-				headers: { "Content-Type": "application/json" },
-			})
-			if (httpresponse.ok) {
-        getTodos()
-			}
-		} catch (error) {
-      console.log(error)
-		}
-	}
   return (
     <>
       <ul>
@@ -94,7 +80,7 @@ const App = () => {
                 setTarea("");
               }
             }}
-            onKeyDown={() => actualizarListaTraeas()}
+            onKeyDown={(e) => actualizarListaTraeas(e)}
             placeholder="What needs to be done?"
           />
         </li>

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Titulo from "./titulo.jsx";
-import Todolist from "./todolist.jsx";
+import App from "./app.jsx";
 
 const Home = () => {
   return (
     <>
       <Titulo />
       <div className="container">
-        <Todolist />
+        <App />
       </div>
     </>
   );
